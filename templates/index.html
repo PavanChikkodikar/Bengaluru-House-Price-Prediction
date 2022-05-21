@@ -10,6 +10,8 @@
 C:\Users\pavan\AppData\Local\Programs\Python\Python39\python.exe
     <title>House Price Predictor</title>
   </head>
+
+
   <body class="bg-dark">
 <div class="container">
   <div class="'row">
@@ -24,9 +26,9 @@ C:\Users\pavan\AppData\Local\Programs\Python\Python39\python.exe
 
             <div class="col-md-6 form-group" style="text-align: center">
               <label><b>Select the Location:</b></label>
-              <select class="select picker form-control" id="location" name="location" required="1">
+              <select class="selectpicker form-control" id="location" name="location" required="1">
                 {% for location in locations %}
-                <option value="{{location}}">{{location}}</option>
+                  <option value="{{location}}">{{location}}</option>
                 {% endfor %}
               </select>
             </div>
@@ -58,6 +60,7 @@ C:\Users\pavan\AppData\Local\Programs\Python\Python39\python.exe
           </div>
 
         </form>
+        <br>
 
         <div class="col-md-12" style="text-align: center">
           <h3><span id="prediction"></span></h3>

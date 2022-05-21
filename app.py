@@ -1,7 +1,6 @@
 
 import pandas as pd
 from flask import Flask, render_template, request
-from flask_cors import CORS,cross_origin
 import pickle
 import numpy as np
 
@@ -12,7 +11,6 @@ data = pd.read_csv('Cleaned_data.csv')
 pipe = pickle.load(open("RidgeModel.pkl",'rb'))
 
 @app.route('/')
-@cross_origin()
 def index():
 
     locations = sorted(data['location'].unique())
@@ -27,11 +25,11 @@ def predict():
 
     print(location,bhk ,bath, sqft)
     input = pd.DataFrame([[location, sqft, bath, bhk]],columns=['location', 'total_sqft', 'bath', 'bhk'])
-    prediction = pipe.predict(input)[0] * 1e5
+    prediction = pipe.predict(input)[0] * 1e5 #100000
 
 
 
     return str(np.round(prediction,2))
 
 if __name__ == "__main__":
-    app.run(debug=True,port=5000)
+    app.run(debug=True,port=5008)

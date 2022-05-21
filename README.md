@@ -1,5 +1,6 @@
 # Bengaluru House Price Prediction
 
-![image](https://user-images.githubusercontent.com/92395503/169653059-f7ad3f2c-bbb3-4438-9d04-f865f89c876c.png)
+![image](https://user-images.githubusercontent.com/92395503/169653458-c79bd7bc-7124-4ea8-a63a-ee450e7501cd.png)
 
-![image](https://user-images.githubusercontent.com/92395503/169653140-f3b1e1e3-59a6-46a6-9ef9-83f1d9590007.png)
+![image](https://user-images.githubusercontent.com/92395503/169653473-c8c9854e-9962-4761-be71-80c31bf28200.png)
+

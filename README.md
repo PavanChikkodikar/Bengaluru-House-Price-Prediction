@@ -1,4 +1,4 @@
-# Bengalore House Price Prediction
+# Bengaluru House Price Prediction
 
 ![image](https://user-images.githubusercontent.com/92395503/169653059-f7ad3f2c-bbb3-4438-9d04-f865f89c876c.png)
 

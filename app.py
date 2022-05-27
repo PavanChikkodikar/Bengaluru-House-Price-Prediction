@@ -1,4 +1,3 @@
-
 import pandas as pd
 from flask import Flask, render_template, request
 import pickle
@@ -17,7 +16,7 @@ def index():
     return render_template('index.html', locations=locations)
 
 @app.route('/predict', methods=['POST'])
-def predict():
+def predict(): #method
     location = request.form.get('location')
     bhk = request.form.get('bhk')
     bath = request.form.get('bath')
@@ -25,7 +24,7 @@ def predict():
 
     print(location,bhk ,bath, sqft)
     input = pd.DataFrame([[location, sqft, bath, bhk]],columns=['location', 'total_sqft', 'bath', 'bhk'])
-    prediction = pipe.predict(input)[0] * 1e5 #100000
+    prediction = pipe.predict(input)[0] * 1e5 # multiplying with 100000
 
 
 

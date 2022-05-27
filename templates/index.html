@@ -75,28 +75,28 @@ C:\Users\pavan\AppData\Local\Programs\Python\Python39\python.exe
 
 <script>
 
-  function form_handler(event)
+  function form_handler(event) //in form_handler event is sent
   {
-    event.preventDefault();
+    event.preventDefault(); //supresses the default behaviour of form
   }
   function send_data()
   {
-    document.querySelector('form').addEventListener("submit",form_handler);
+    document.querySelector('form').addEventListener("submit",form_handler); //select the form and then applied event listener, whenever submit event is clicked form_handler function will execute
 
-    var fd = new FormData(document.querySelector('form'));
+    var fd = new FormData(document.querySelector('form')); //selecting the form ,and stored it in form data object,form data objects are required to store form datas
 
-    var xhr = new XMLHttpRequest();
+    var xhr = new XMLHttpRequest(); //created the object of XMLHttp Request
 
-    xhr.open('POST','/predict',true);
-    document.getElementById("prediction").innerHTML = "Wait Predicting Price!....";
+    xhr.open('POST','/predict',true); //open the request in predict url
+    document.getElementById("prediction").innerHTML = "Wait Predicting Price!...."; //the prediction will be too fast it cant be seen,in case the server down it will displayes the message
 
-    xhr.onreadystatechange = function(){
+    xhr.onreadystatechange = function(){ //for catching prediction using onreadystatechange
       if(xhr.readyState == XMLHttpRequest. DONE){
         document.getElementById('prediction').innerHTML = "Prediction: ₹ " + xhr.responseText;
       }
     };
-    xhr.onload = function(){};
-    xhr.send(fd);
+    xhr.onload = function(){}; //passing the empty function ,here XMLHttp Request just gets open
+    xhr.send(fd); //for sending the form data
   }
 
 </script>
